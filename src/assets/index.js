@@ -1,0 +1,6 @@
+export { default as research } from './Research.jpg'
+export { default as social } from './social.jpg'
+export { default as employee } from './EHM.png'
+export { default as youtube } from './youtube.png'
+export { default as amazon } from './amazon.png'
+export { default as netflix } from './netflix.jpg'
