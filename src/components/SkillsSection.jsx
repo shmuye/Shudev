@@ -3,29 +3,29 @@ import { cn } from "@/lib/utils";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 90, category: "frontend" },
-  { name: "JavaScript", level: 85, category: "frontend" },
-  { name: "React", level: 80, category: "frontend" },
-  { name: "TypeScript", level: 80, category: "frontend" },
-  { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Next.js", level: 70, category: "frontend" },
+  { name: "HTML/CSS", level: 80, category: "frontend" },
+  { name: "JavaScript", level: 75, category: "frontend" },
+  { name: "React", level: 70, category: "frontend" },
+  { name: "TypeScript", level: 60, category: "frontend" },
+  { name: "Tailwind CSS", level: 75, category: "frontend" },
+  { name: "Next.js", level: 60, category: "frontend" },
 
   // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "Nest.js", level: 70, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
+  { name: "Node.js", level: 70, category: "backend" },
+  { name: "Express", level: 65, category: "backend" },
+  { name: "Nest.js", level: 60, category: "backend" },
+  { name: "MongoDB", level: 60, category: "backend" },
+  { name: "PostgreSQL", level: 60, category: "backend" },
   { name: "MySQL", level: 60, category: "backend" },
-  { name: "Supabase", level: 75, category: "backend" },
-  { name: "Fast API", level: 55, category: "backend" },
-  { name: "python", level: 70, category: "backend" },
+  { name: "Supabase", level: 65, category: "backend" },
+  { name: "Fast API", level: 50, category: "backend" },
+  { name: "python", level: 60, category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 60, category: "tools" },
-  { name: "Figma", level: 70, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  { name: "Git/GitHub", level: 80, category: "tools" },
+  { name: "Docker", level: 50, category: "tools" },
+  { name: "Figma", level: 50, category: "tools" },
+  { name: "VS Code", level: 85, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -76,11 +76,11 @@ export const SkillsSection = () => {
                 />
               </div>
 
-              <div className="text-right mt-1">
+              {/* <div className="text-right mt-1">
                 <span className="text-sm text-muted-foreground">
                   {skill.level}%
                 </span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
