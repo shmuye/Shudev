@@ -11,22 +11,60 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL
+
 export const ContactSection = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      setIsSubmitting(false);
-    }, 1500);
+    const formData = new FormData(e.target)
+
+    const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+  };
+
+  try {
+
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+
+    if (!res.ok) throw new Error("Failed");
+
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+
+    e.target.reset();
+    
+  } catch (error) {
+
+    toast({
+      title: "Error",
+      description: "Could not send message.",
+      variant: "destructive",
+    });
+    
+  } finally {
+    setIsSubmitting(false)
+  }
+
+    // setTimeout(() => {
+    //   toast({
+    //     title: "Message sent!",
+    //     description: "Thank you for your message. I'll get back to you soon.",
+    //   });
+    //   setIsSubmitting(false);
+    // }, 1500);
   };
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
@@ -82,9 +120,9 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
+                  <p className="text-muted-foreground hover:text-primary transition-colors">
                     Addis Ababa, Ethiopia
-                  </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -95,17 +133,25 @@ export const ContactSection = () => {
                 <a 
                 href="https://www.linkedin.com/in/shmuye-Ayalneh" 
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Linkedin Profile"
                 >
                   <Linkedin />
                 </a>
                 <a 
                   href="https://x.com/shudev27" 
-                  target="_blank">
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="X Profile"
+                  >
                   <Twitter />
                 </a>
                 <a 
                   href="https://github.com/shmuye" 
-                  target="_blank">
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Github Profile"
+                  >
                   <Github />
                 </a>
               </div>
@@ -114,11 +160,14 @@ export const ContactSection = () => {
 
           <div
             className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
+          
           >
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form 
+                className="space-y-6"
+                onSubmit={handleSubmit}
+             >
               <div>
                 <label
                   htmlFor="name"
@@ -132,7 +181,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="John Doe"
                 />
               </div>
@@ -150,7 +199,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
                 />
               </div>
@@ -167,7 +216,7 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Type your message here..."
                 />
               </div>
@@ -176,7 +225,8 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
+                  isSubmitting && "opacity-70 cursor-not-allowed"
                 )}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
