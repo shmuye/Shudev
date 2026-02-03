@@ -68,7 +68,7 @@ export const Navbar = () => {
           className={cn(
             "fixed top-0 inset-x-0 bg-background/90 backdrop-blur-md z-40 flex flex-col items-center justify-center",
             "transition-all duration-300 md:hidden",
-            "py-8",
+            "pt-8 pb-16",
             isMenuOpen
               ? "opacity-100 pointer-events-auto"
               : "opacity-0 pointer-events-none"
