@@ -57,15 +57,7 @@ export const ContactSection = () => {
   } finally {
     setIsSubmitting(false)
   }
-
-    // setTimeout(() => {
-    //   toast({
-    //     title: "Message sent!",
-    //     description: "Thank you for your message. I'll get back to you soon.",
-    //   });
-    //   setIsSubmitting(false);
-    // }, 1500);
-  };
+};
   return (
     <section id="contact" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
