@@ -38,7 +38,7 @@ const projects = [
     description: "To enable users to explore a wide range of movies and TV shows with categorized listings and detailed media previews.",
     image: netflix,
     tags: ["Typescript", "React", "TailwindCSS" ],
-    demoUrl: "#",
+    demoUrl: "https://netflix-clone-psi-gold-74.vercel.app/",
     githubUrl: "https://github.com/shmuye/Netflix-clone",
   },
   {
@@ -48,8 +48,8 @@ const projects = [
       "A YouTube clone application featuring video search and filtering, with detailed video pages displaying likes and view counts.",
     image: youtube,
     tags: ["React", "Material UI"],
-    demoUrl: "https://utubelike.netlify.app/",
-    githubUrl: "https://github.com/shmuye/youtube-clone",
+    demoUrl: "https://new-yt-clone-3rdj.vercel.app/",
+    githubUrl: "https://github.com/shmuye/new-yt-clone",
   },
   {
     id: 6,
