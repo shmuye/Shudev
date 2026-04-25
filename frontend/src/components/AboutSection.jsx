@@ -42,8 +42,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/12Gpxa328Z-781uJqyAUvPaCdYMaoFVo5/view?usp=sharing"
-                target="/"
+                href="https://drive.google.com/file/d/1Lq0YNNUCTuz3HrSjb3oAvs32PCqccHjX/view?usp=sharing"
+                target="_blank"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 View Resume
