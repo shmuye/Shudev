@@ -1,16 +1,16 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-import { research, netflix, youtube, amazon, social, employee } from "../assets";
+import { research, netflix, youtube, amazon, social, employee, lms } from "../assets";
 
 const projects = [
-  {
-    id: 1,
-    title: "Social Media application",
-    description: "A lightweight social media app featuring communities, posts, comments, likes, and github OAuth authentication",
-    image: social,
-    tags: ["Typescript", "React", "TailwindCSS", "Supabase"],
-    demoUrl: "https://postly-flax-iota.vercel.app/",
-    githubUrl: "https://github.com/shmuye/social-media-app",
-  },
+  // {
+  //   id: 1,
+  //   title: "Social Media application",
+  //   description: "A lightweight social media app featuring communities, posts, comments, likes, and github OAuth authentication",
+  //   image: social,
+  //   tags: ["Typescript", "React", "TailwindCSS", "Supabase"],
+  //   demoUrl: "https://postly-flax-iota.vercel.app/",
+  //   githubUrl: "https://github.com/shmuye/social-media-app",
+  // },
   {
     id: 2,
     title: "Research Collaboration Mobile Application",
@@ -61,6 +61,16 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/shmuye/amazon-clone",
   },
+  {
+    id: 7,
+    title: "Library Management System",
+    description:
+      "full-stack Library Management System with the MERN stack, role-based access control, secure authentication, and an admin dashboard. Used Redux, TanStack Query, Zod, and React Hook Form to build a scalable, maintainable application.",
+    image: lms,
+    tags: ["React", "Tailwind CSS", "Express.js", "MongoDB", "Redux"],
+    demoUrl: "#",
+    githubUrl: "https://github.com/shmuye/lms-scratch",
+  }
 ];
 
 export const ProjectsSection = () => {

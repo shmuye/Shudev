@@ -26,9 +26,14 @@ const skills = [
   { name: "Docker", level: 50, category: "tools" },
   { name: "Figma", level: 50, category: "tools" },
   { name: "VS Code", level: 85, category: "tools" },
+
+  // Mobile
+  { name: "Flutter", level: 60, category: "Mobile" },
+  { name: "Jetpack Compose", level: 50, category: "Mobile" },
+  {name: "React Native", level: 50, category: "Mobile" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "frontend", "backend", "tools", "Mobile"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
