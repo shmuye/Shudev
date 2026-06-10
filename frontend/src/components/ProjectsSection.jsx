@@ -23,6 +23,16 @@ const projects = [
     githubUrl: "https://github.com/shmuye/Research-collaboration-app",
   },
   {
+    id: 5,
+    title: "Youtube Clone",
+    description:
+      "A YouTube clone application featuring video search and filtering, with detailed video pages displaying likes and view counts.",
+    image: youtube,
+    tags: ["React", "Material UI"],
+    demoUrl: "https://new-yt-clone-3rdj.vercel.app/",
+    githubUrl: "https://github.com/shmuye/new-yt-clone",
+  },
+  {
     id: 3,
     title: "Employee hierarchy manager",
     description:
@@ -41,26 +51,18 @@ const projects = [
     demoUrl: "https://netflix-clone-psi-gold-74.vercel.app/",
     githubUrl: "https://github.com/shmuye/Netflix-clone",
   },
-  {
-    id: 5,
-    title: "Youtube Clone",
-    description:
-      "A YouTube clone application featuring video search and filtering, with detailed video pages displaying likes and view counts.",
-    image: youtube,
-    tags: ["React", "Material UI"],
-    demoUrl: "https://new-yt-clone-3rdj.vercel.app/",
-    githubUrl: "https://github.com/shmuye/new-yt-clone",
-  },
-  {
-    id: 6,
-    title: "Amazon clone",
-    description:
-      "replicating the core functionality of an e-commerce platform, enabling users to browse products, manage a shopping cart, and complete purchases.",
-    image: amazon,
-    tags: ["React", "Firebase", "Javascript"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/shmuye/amazon-clone",
-  },
+  
+  // {
+  //   id: 6,
+  //   title: "Amazon clone",
+  //   description:
+  //     "replicating the core functionality of an e-commerce platform, enabling users to browse products, manage a shopping cart, and complete purchases.",
+  //   image: amazon,
+  //   tags: ["React", "Firebase", "Javascript"],
+  //   demoUrl: "#",
+  //   githubUrl: "https://github.com/shmuye/amazon-clone",
+  // },
+
   {
     id: 7,
     title: "Library Management System",
