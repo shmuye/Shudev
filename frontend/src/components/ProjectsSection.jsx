@@ -2,15 +2,15 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import { research, netflix, youtube, amazon, social, employee, lms } from "../assets";
 
 const projects = [
-  // {
-  //   id: 1,
-  //   title: "Social Media application",
-  //   description: "A lightweight social media app featuring communities, posts, comments, likes, and github OAuth authentication",
-  //   image: social,
-  //   tags: ["Typescript", "React", "TailwindCSS", "Supabase"],
-  //   demoUrl: "https://postly-flax-iota.vercel.app/",
-  //   githubUrl: "https://github.com/shmuye/social-media-app",
-  // },
+  {
+    id: 1,
+    title: "Social Media application",
+    description: "A lightweight social media app featuring communities, posts, comments, likes, and github OAuth authentication",
+    image: social,
+    tags: ["Typescript", "React", "TailwindCSS", "Supabase"],
+    demoUrl: "https://postly-flax-iota.vercel.app/",
+    githubUrl: "https://github.com/shmuye/social-media-app",
+  },
   {
     id: 2,
     title: "Research Collaboration Mobile Application",
